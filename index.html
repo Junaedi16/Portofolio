@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 5px solid white;
+            animation: bounce 2s infinite;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin: 20px 0;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section h3 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .project-card h4 {
+            margin: 15px 0;
+            font-size: 24px;
+        }
+
+        .project-card p {
+            font-size: 16px;
+            color: #ddd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .education, .hobbies-skills {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+        }
+
+        .education h3, .hobbies-skills h3 {
+            text-align: center;
+        }
+
+        .education ul, .hobbies-skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .education li, .hobbies-skills li {
+            margin: 10px 0;
+        }
+
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .photo-gallery img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+        .certificates {
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .certificates img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#hobbies-skills">Hobbies & Skills</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#certificates">Certificates</a>
+            <a href="https://wa.me/+6285709352996" target="_blank">WhatsApp</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <img src="8.jpg" alt="Profile Picture">
+        <h2>Hello, Saya Juna</h2>
+        <p>Sebagai seorang desainer web berpengalaman, saya ahli dalam merancang situs web yang responsif dan menarik, serta menguasai penggunaan Microsoft Word, Excel, dan PowerPoint untuk mendukung pekerjaan administratif dan presentasi</p>
+    </div>
+
+    <section class="section" id="about">
+        <h3>About Me</h3>
+        <p>Saya adalah desainer web yang terampil dalam Front-End dan Back-End, serta menguasai Microsoft Word, Excel, dan PowerPoint untuk membantu mewujudkan desain berkualitas sambil mendukung tugas administratif dan pengelolaan data. selain di bidang tersebut saya juga senang berbicara di depan umum, dengan kemampuan publik speaking yang saya miliki saya sangat percaya diri dengan kemampuan saya ketika berbicara di depan umum.</p>
+    </section>
+
+    <section class="section" id="education">
+        <h3>Education</h3>
+        <div class="education">
+            <ul>
+                <li><strong>SD:</strong> SDN 1 Makarti Jaya</li>
+                <li><strong>SMP:</strong> Mts Miftahul Ulum Makarti Jaya</li>
+                <li><strong>SMA:</strong> SMA Muhammadiyah Makarti Jaya</li>
+                <li><strong>Perguruan Tinggi:</strong> Politeknik Piksi Ganesha</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section" id="hobbies-skills">
+        <h3>Hobbies & Skills</h3>
+        <div class="hobbies-skills">
+            <h4>Hobbies:</h4>
+            <ul>
+                <li>Volly Ball</li>
+                <li>Basket Ball</li>
+                <li>Beladiri</li>
+                <li>Hadroh</li>
+                <li>Berenang</li>
+                <li>Traveling</li>
+            </ul>
+
+            <h4>Skills:</h4>
+            <ul>
+                
+                <li>Android Studio(App)</li>
+                <li>Visual Studio(App)</li>
+                <li>Sublime text(App)</li>
+                <li>Web Development (HTML, CSS, JavaScript)</li>
+                <li>Backend Development (PHP)</li>
+                <li>Database Management (MySQL, FireBase)</li>
+                <li>Graphic Design (Canva)</li>
+                <li>Microsoft Word</li>
+                <li>Microsoft Excel</li>
+                <li>Power Point</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section" id="gallery">
+        <h3>Photo Gallery</h3>
+        <div class="photo-gallery">
+            <img src="1.jpg" alt="Gallery Image 1">
+            <img src="2.jpg" alt="Gallery Image 2">
+            <img src="3.jpg" alt="Gallery Image 3">
+            <img src="4.jpg" alt="Gallery Image 4">
+            <img src="5.jpg" alt="Gallery Image 5">
+            <img src="6.jpg" alt="Gallery Image 6">
+            <img src="7.jpg" alt="Gallery Image 7">
+            <img src="9.jpg" alt="Gallery Image 10">
+            <img src="10.jpg" alt="Gallery Image 11">
+            <img src="11.jpg" alt="Gallery Image 9">
+            <img src="12.jpg" alt="Gallery Image 1">
+            <img src="13.jpg" alt="Gallery Image 1">
+            <img src="14.jpg" alt="Gallery Image 1">
+            <img src="15.jpg" alt="Gallery Image 1">
+            <img src="16.jpg" alt="Gallery Image 1">
+            <img src="17.jpg" alt="Gallery Image 1">
+            <img src="18.jpg" alt="Gallery Image 1">
+            <img src="19.jpg" alt="Gallery Image 1">
+            <img src="23.jpg" alt="Gallery Image 1">
+            <img src="21.jpg" alt="Gallery Image 1">
+            <img src="22.jpg" alt="Gallery Image 1">
+            
+        </div>
+    </section>
+
+    <section class="section" id="projects">
+        <h3>Projects</h3>
+        <div class="projects">
+            <div class="project-card">
+                <img src="p1.jpg" alt="Project 1">
+                <h4>Project 1</h4>
+                <p> saya membuat project tentang inputan data mahasiswa menggunakan android studio yang terhubung dengan fire base untuk menyimpan atau merekam data</p>
+            </div>
+            <div class="project-card">
+                <img src="p2.png" alt="Project 2">
+                <h4>Project 2</h4>
+                <p>saya membuat project tentang inputan data menggunakan php yang terhubung ke database my sql agar dapat menyimpan dan merekam data</p>
+            </div>
+            <div class="project-card">
+                <img src="p3.png" alt="Project 3">
+                <h4>Project 3</h4>
+                <p>saya membuat sistem pemesanan makanan mengunakan html yang terhubung dengan database my sql agar dapat menyimpan dan merekam data pemesanan.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="certificates">
+        <h3>Certificates</h3>
+        <div class="certificates">
+            <img src="d.jpg" alt="Certificate 1">
+            <img src="e.jpg" alt="Certificate 2">
+            <img src="f.jpg" alt="Certificate 3">
+            <img src="g.jpg" alt="Certificate 3">
+        </div>
+    </section>
+            <footer>
+            <p>&copy; 2024 Juna. All rights reserved.</p>
+            <p>Follow me: 
+                <a href="https://instagram.com/bangjunaaa" target="_blank">Instagram</a> |
+                <a href="https://wa.me/+6285709352996" target="_blank">WhatsApp</a> |
+                <a href="https://facebook.com/juna" target="_blank">Facebook</a>
+            </p>
+            <p>Contact: Juna16062001@gmail.com | Address: Perumahan Graha Kencana Batujajar bLok G2 No 23</p>
+        </footer>
+    </body>
+</html>
+
+</body>
+</html>
